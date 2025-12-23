@@ -1,7 +1,7 @@
 #_require ps12exe
 #_pragma Console 0
 $char_url = Read-Host -Prompt "输入你的角色地址（传统酒馆角色的png的下载地址或risu的charx角色下载地址或fount角色的安装包下载地址或fount角色的git地址）"
-$fount_url = "fount://run/shells/install/install;$([uri]::EscapeDataString($char_url))"
+$fount_url = "fount://run/shells:install/install;$([uri]::EscapeDataString($char_url))"
 @"
 if (!(Get-Command "fount.bat" -ErrorAction SilentlyContinue)) {
 	# prompt for choice
